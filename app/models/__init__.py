@@ -20,5 +20,12 @@ MESSAGE_MODELS = {
     'ごみ出しメニュー': {
         'model': 'trash',
         'scene': 'menu'
+# 2019/07/03 add start 
+# DDP条件メニュー
+    },
+    'DDP利用メニュー': {
+        'model': 'ddp',
+        'scene': 'menu'
+# 2019/07/03 add end 
     }
 }

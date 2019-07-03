@@ -12,8 +12,10 @@ from app.models import MESSAGE_MODELS, MODELS
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-
+# メッセージの制御部分
+# メッセージ受信時の制御
 class MessageHandler(object):
+# 初期化
     def __init__(self, line_bot_api, event):
         self._GET_EVENT = {
             'message': self._get_message_event,
@@ -23,6 +25,7 @@ class MessageHandler(object):
         self.event = event
         self.event_type = event.type
 
+# パラメーター値を元に各機能の呼び出し先を起動していると思われ・・・
     def handle_event(self):
         logger.info('handle_event:{}'.format(self.event))
         event_data = self._GET_EVENT.get(self.event_type)()
@@ -39,13 +42,15 @@ class MessageHandler(object):
         messages = model_instance.get_template(scene, text)
         Messenger().send(self.line_bot_api, self.event.reply_token, messages, method)
 
+# models配下のpythonを起動してる？
     def _get_message_event(self):
         return MESSAGE_MODELS.get(self.event.message.text, None)
 
+# json load で過去のやり取りを取得している？ 
     def _get_postback_event(self):
         return json.loads(self.event.postback.data)
 
-
+# メッセージ送信時の制御
 class PostbackHandler(object):
     def __init__(self, event):
         self._EVENT = {
@@ -55,10 +60,12 @@ class PostbackHandler(object):
         self.event_type = self.event.get('type')
         self.event_data = self.event.get('data')
 
+# どうやってここに制御が来るのかわからない
     def handle_event(self):
         logger.info('handle_event:{}'.format(self.event))
         return self._EVENT.get(self.event_type)(self.event_data)
 
+# どうやってここに制御が来るのかわからない
     def process(self, data):
         model = data.get('model')
         process = data.get('process', None)

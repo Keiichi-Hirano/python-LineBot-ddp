@@ -3,69 +3,69 @@ author          : nsuhara <na010210dv@gmail.com>
 date created    : 2019/5/1
 python version  : 3.7.3
 """
+import datetime
 import json
 import logging
 
-from linebot.models.actions import PostbackAction
+from linebot.models.actions import PostbackAction, URIAction
 from linebot.models.template import ButtonsTemplate, TemplateSendMessage
 
 from app.framework.nslinebot.models.story_board import StoryBoard
+from app.processes.trash import Process
 
 logger = logging.getLogger(__name__)
 
 
-class MainMenu(StoryBoard):
+class Trash(StoryBoard):
     def __init__(self):
         super().__init__()
+        process = Process()
+        self.PROCESS = {
+            'what_day_of_garbage_is_today': process.what_day_of_garbage_is_today
+        }
 
     def process_handler(self, kwargs):
-        pass
+        logger.info('process_handler:{}'.format(kwargs))
+        return self.PROCESS.get(kwargs.get('handle'))()
 
     def story_board(self, text):
         return {
             'menu': TemplateSendMessage(
                 alt_text='ButtonsTemplate',
                 template=ButtonsTemplate(
-                    title='メインメニュー',
+                    title='DDP利用メニュー',
                     text=text if text else '選択して下さい',
                     actions=[
                         PostbackAction(
-                            label='勤怠メニュー',
+                            label='DDP利用',
                             data=json.dumps({
-                                'model': 'clock_in',
-                                'scene': 'menu'
+                                'model': 'ddp',
+                                'scene': 'result',
+                                'process': {'handle': 'what_day_of_garbage_is_today'}
                             })
                         ),
                         PostbackAction(
-                            label='ごみ出しメニュー',
+                            label='戻る',
                             data=json.dumps({
-                                'model': 'trash',
+                                'model': 'main_menu',
                                 'scene': 'menu'
                             })
-                        ),
+                        )
+                    ]
+                )
+            ),
+            'result': TemplateSendMessage(
+                alt_text='ButtonsTemplate',
+                template=ButtonsTemplate(
+                    title='DDP利用メニュー',
+                    text=text if text else '取得できませんでした',
+                    actions=[
                         PostbackAction(
-                            label='(工事中)クーポンメニュー',
-                            data=json.dumps({
-                                'model': 'coupon',
-                                'scene': 'menu'
-                            })
-                        ),
-                        PostbackAction(
-                            label='(工事中)自然言語メニュー',
-                            data=json.dumps({
-                                'model': 'talk',
-                                'scene': 'menu'
-                            })
-# 2019/07/03 add start 
-                        ),
-# DDP条件メニュー
-                        PostbackAction(
-                            label='DDP利用メニュー',
+                            label='戻る',
                             data=json.dumps({
                                 'model': 'ddp',
                                 'scene': 'menu'
                             })
-# 2019/07/03 add end 
                         )
                     ]
                 )

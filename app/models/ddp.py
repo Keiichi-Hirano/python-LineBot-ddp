@@ -16,7 +16,7 @@ from app.processes.trash import Process
 logger = logging.getLogger(__name__)
 
 
-class Trash(StoryBoard):
+class Ddp(StoryBoard):
     def __init__(self):
         super().__init__()
         process = Process()

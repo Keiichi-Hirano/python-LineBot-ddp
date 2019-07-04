@@ -6,6 +6,10 @@ MODELS = {
     'main_menu': MainMenu,
     'clock_in': ClockIn,
     'trash': Trash
+# 2019/07/03 add start 
+# DDP条件メニュー
+    'ddp': Ddp
+# 2019/07/03 add end 
 }
 
 MESSAGE_MODELS = {

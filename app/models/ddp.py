@@ -30,6 +30,7 @@ class Ddp(StoryBoard):
 
     def story_board(self, text):
         return {
+# menu            
             'menu': TemplateSendMessage(
                 alt_text='ButtonsTemplate',
                 template=ButtonsTemplate(
@@ -37,11 +38,10 @@ class Ddp(StoryBoard):
                     text=text if text else '選択して下さい',
                     actions=[
                         PostbackAction(
-                            label='DDP利用',
+                            label='DDP利用判定開始',
                             data=json.dumps({
                                 'model': 'ddp',
-                                'scene': 'result',
-                                'process': {'handle': 'what_day_of_garbage_is_today'}
+                                'scene': 'check1'
                             })
                         ),
                         PostbackAction(
@@ -54,6 +54,157 @@ class Ddp(StoryBoard):
                     ]
                 )
             ),
+#  check1 
+            'check1': TemplateSendMessage(
+                alt_text='ButtonsTemplate',
+                template=ButtonsTemplate(
+                    title='利用するトランデータは CokeOne データですか？',
+                    text=text if text else '選択して下さい',
+                    actions=[
+                        PostbackAction(
+                            label='Yes',
+                            data=json.dumps({
+                                'model': 'ddp',
+                                'scene': 'check2',
+                                'check1':'Y'
+                            })
+                        ),
+                        PostbackAction(
+                            label='No',
+                            data=json.dumps({
+                                'scene': 'check2',
+                                'model': 'ddp',
+                                'check1':'N'
+                            })
+                        )
+                    ]
+                )
+            ),
+#  check2 
+            'check2': TemplateSendMessage(
+                alt_text='ButtonsTemplate',
+                template=ButtonsTemplate(
+                    title='データは参照のみですか？更新用件はありませんか？',
+                    text=text if text else '選択して下さい',
+                    actions=[
+                        PostbackAction(
+                            label='Yes',
+                            data=json.dumps({
+                                'model': 'ddp',
+                                'scene': 'check3',
+                                'check1':'check1',
+                                'check2':'Y'
+                            })
+                        ),
+                        PostbackAction(
+                            label='No',
+                            data=json.dumps({
+                                'scene': 'check3',
+                                'model': 'ddp',
+                                'check1':'check1',
+                                'check2':'N'
+                            })
+                        )
+                    ]
+                )
+            ),
+#  check3 
+            'check3': TemplateSendMessage(
+                alt_text='ButtonsTemplate',
+                template=ButtonsTemplate(
+                    title='処理結果の表示にUIは使用しますか？',
+                    text=text if text else '選択して下さい',
+                    actions=[
+                        PostbackAction(
+                            label='Yes',
+                            data=json.dumps({
+                                'model': 'ddp',
+                                'scene': 'checK4',
+                                'check1':'check1',
+                                'check2':'check2',
+                                'check3':'Y'
+                            })
+                        ),
+                        PostbackAction(
+                            label='No',
+                            data=json.dumps({
+                                'scene': 'checK4',
+                                'model': 'ddp',
+                                'check1':'check1',
+                                'check2':'check2',
+                                'check3':'N'
+                            })
+                        )
+                    ]
+                )
+            ),
+#  check4 
+            'check4': TemplateSendMessage(
+                alt_text='ButtonsTemplate',
+                template=ButtonsTemplate(
+                    title='処理結果の表示にUIは使用しますか？',
+                    text=text if text else '選択して下さい',
+                    actions=[
+                        PostbackAction(
+                            label='Yes',
+                            data=json.dumps({
+                                'model': 'ddp',
+                                'scene': 'checK5',
+                                'check1':'check1',
+                                'check2':'check2',
+                                'check3':'check3',
+                                'check4':'Y'
+                            })
+                        ),
+                        PostbackAction(
+                            label='No',
+                            data=json.dumps({
+                                'scene': 'checK5',
+                                'model': 'ddp',
+                                'check1':'check1',
+                                'check2':'check2',
+                                'check3':'check3',
+                                'check4':'N'
+                            })
+                        )
+                    ]
+                )
+            ),
+#  check5 
+            'check5': TemplateSendMessage(
+                alt_text='ButtonsTemplate',
+                template=ButtonsTemplate(
+                    title='処理結果の表示にUIは使用しますか？',
+                    text=text if text else '選択して下さい',
+                    actions=[
+                        PostbackAction(
+                            label='Yes',
+                            data=json.dumps({
+                                'model': 'ddp',
+                                'scene': 'answer',
+                                'check1':'check1',
+                                'check2':'check2',
+                                'check3':'check3',
+                                'check4':'check4',
+                                'check5':'Y'
+                            })
+                        ),
+                        PostbackAction(
+                            label='No',
+                            data=json.dumps({
+                                'scene': 'answer',
+                                'model': 'ddp',
+                                'check1':'check1',
+                                'check2':'check2',
+                                'check3':'check3',
+                                'check4':'check4',
+                                'check5':'N'
+                            })
+                        )
+                    ]
+                )
+            ),
+# result             
             'result': TemplateSendMessage(
                 alt_text='ButtonsTemplate',
                 template=ButtonsTemplate(
@@ -70,4 +221,5 @@ class Ddp(StoryBoard):
                     ]
                 )
             )
+
         }

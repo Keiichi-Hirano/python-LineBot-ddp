@@ -128,9 +128,7 @@ class Ddp(StoryBoard):
                             data=json.dumps({
                                 'model': 'ddp',
                                 'scene': 'checK4',
-                                'check1':'check1',
-                                'check2':'check2',
-                                'check3':'Y'
+                                'check1':'check1','check2':'check2','check3':'Y'
                             })
                         ),
                         PostbackAction(
@@ -138,9 +136,7 @@ class Ddp(StoryBoard):
                             data=json.dumps({
                                 'scene': 'checK4',
                                 'model': 'ddp',
-                                'check1':'check1',
-                                'check2':'check2',
-                                'check3':'N'
+                                'check1':'check1','check2':'check2','check3':'N'
                             })
                         )
                     ]

@@ -86,7 +86,7 @@ def postback():
     try:
         return PostbackHandler(request.get_data(as_text=True)).handle_event(), 200
     except Exception:
-        abort(400)
+        abort(400)  
 
 ###############################################
 # ポート番号の設定

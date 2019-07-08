@@ -126,7 +126,7 @@ class Ddp(StoryBoard):
                         PostbackAction(
                             label='Yes',
                             data=json.dumps({
-                                'scene': 'checK4',
+                                'scene': 'check4',
                                 'model': 'ddp',
                                 'check1':'check1','check2':'check2','check3':'Y'
                             })
@@ -134,7 +134,7 @@ class Ddp(StoryBoard):
                         PostbackAction(
                             label='No',
                             data=json.dumps({
-                                'scene': 'checK4',
+                                'scene': 'check4',
                                 'model': 'ddp',
                                 'check1':'check1','check2':'check2','check3':'N'
                             })

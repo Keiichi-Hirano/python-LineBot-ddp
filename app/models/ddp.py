@@ -27,14 +27,14 @@ class Ddp(StoryBoard):
 
     def process_handler(self, kwargs):
         logger.info('process_handler:{}'.format(kwargs))
-        process = Process()
-        res = process.post('handle',
+#        process = Process()
+#        res = process.post(dakoku_value.get(kwargs.get('handle')),
+        return self.PROCESS.get(kwargs.get('handle'),
                             kwargs.get('check1'),
                             kwargs.get('check2'),
                             kwargs.get('check3'),
                             kwargs.get('check4'),
                             kwargs.get('check5'))
-        return '{}'.format(res.get('message'))
 
     def story_board(self, text):
         return {

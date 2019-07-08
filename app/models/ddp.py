@@ -36,6 +36,7 @@ class Ddp(StoryBoard):
                             kwargs.get('check4'),
                             kwargs.get('check5'))
 
+                            
     def story_board(self, text):
         return {
 # menu            

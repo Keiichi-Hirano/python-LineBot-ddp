@@ -53,7 +53,7 @@ class ClockIn(StoryBoard):
                     text=text if text else '選択して下さい',
                     actions=[
                         URIAction(
-                            uri='line://app/<LIFF URL>',
+                            uri='line://app/1596725374-1ZJd3BlA',    
                             label='勤怠入力'
                         ),
                         PostbackAction(

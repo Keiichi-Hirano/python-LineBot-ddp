@@ -15,7 +15,7 @@ from linebot.models import MessageEvent, PostbackEvent, TextMessage
 #
 from app.framework.nslinebot.controllers.handler import (MessageHandler,  # pylint: disable=E0611
                                                          PostbackHandler)
-
+    
 ###############################################
 # インスタンスの設定
 ###############################################

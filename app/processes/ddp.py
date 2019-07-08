@@ -18,7 +18,7 @@ class Process(object):
 #            return '第4{}は「{}」の日です\n({})'.format(WEEKDAY[weekday], '陶磁器/ガラスごみ', DETAIL.get('陶磁器/ガラスごみ'))
 #        else:
 #            return '{}は「{}」の日です\n({})'.format(WEEKDAY[weekday], GARBAGE[weekday], DETAIL.get(GARBAGE[weekday]))
-            return '{}は「{}」です\n({})'.'テスト','良好','もうひと息！'
+            return '{}は「{}」です\n({})'.format('テスト','良好','もうひと息！')
 
     def _get_week_number(self, date_time):
         day = date_time.day

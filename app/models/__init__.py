@@ -1,7 +1,7 @@
 from .clock_in import ClockIn
 from .main_menu import MainMenu
 from .trash import Trash
-from .ddp import Ddp
+from .ddp import  Ddp
 
 MODELS = {
     'main_menu': MainMenu,

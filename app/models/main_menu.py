@@ -43,21 +43,21 @@ class MainMenu(StoryBoard):
                                 'scene': 'menu'
                             })
                         ),
-                        PostbackAction(
-                            label='(工事中)クーポンメニュー',
-                            data=json.dumps({
-                                'model': 'coupon',
-                                'scene': 'menu'
-                            })
-                        ),
-                        PostbackAction(
-                            label='(工事中)自然言語メニュー',
-                            data=json.dumps({
-                                'model': 'talk',
-                                'scene': 'menu'
-                            })
+#                        PostbackAction(
+#                            label='(工事中)クーポンメニュー',
+#                            data=json.dumps({
+#                                'model': 'coupon',
+#                                'scene': 'menu'
+#                            })
+#                        ),
+#                        PostbackAction(
+#                            label='(工事中)自然言語メニュー',
+#                            data=json.dumps({
+#                                'model': 'talk',
+#                                'scene': 'menu'
+#                            })
 # 2019/07/03 add start 
-                        ),
+#                        ),
 # DDP条件メニュー
                         PostbackAction(
                             label='DDP利用メニュー',

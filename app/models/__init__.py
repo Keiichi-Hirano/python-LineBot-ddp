@@ -6,11 +6,10 @@ from .ddp import  Ddp
 MODELS = {
     'main_menu': MainMenu,
     'clock_in': ClockIn,
-    'trash': Trash
 # 2019/07/03 add start 
 # DDP条件メニュー
-#    'trash': Trash,
-#    'ddp': Ddp
+    'trash': Trash,
+    'ddp': Ddp
 # 2019/07/03 add end 
 }
 
@@ -28,10 +27,10 @@ MESSAGE_MODELS = {
         'scene': 'menu'
 # 2019/07/03 add start 
 # DDP条件メニュー
-#    },
-#    'DDP利用メニュー': {
-#        'model': 'ddp',
-#        'scene': 'menu'
+    },
+    'DDP利用メニュー': {
+        'model': 'ddp',
+        'scene': 'menu'
 # 2019/07/03 add end 
     }
 }

@@ -23,7 +23,9 @@ class Messenger(object):
 # 返信
     def _reply_message(self, line_bot_api, reply_token, messages):
         logger.info('_reply_message:{}'.format(messages))
+        print(messages)
         line_bot_api.reply_message(reply_token, messages, timeout=None)
+
 
 # プッシュメッセージ
     def _push_message(self, line_bot_api, to, messages):

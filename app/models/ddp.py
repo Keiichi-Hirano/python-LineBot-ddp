@@ -11,21 +11,29 @@ from linebot.models.actions import PostbackAction, URIAction
 from linebot.models.template import ButtonsTemplate, TemplateSendMessage
 
 from app.framework.nslinebot.models.story_board import StoryBoard
-from app.processes.trash import Process
+from app.processes.ddp import Process
+
+# DDP_check_process
 
 logger = logging.getLogger(__name__)
-
 
 class Ddp(StoryBoard):
     def __init__(self):
         super().__init__()
         process = Process()
         self.PROCESS = {
-            'what_day_of_garbage_is_today': process.what_day_of_garbage_is_today
+            'DDP_check_process': process.DDP_check_process
         }
 
     def process_handler(self, kwargs):
         logger.info('process_handler:{}'.format(kwargs))
+        process = Process()
+        res = process.post(dakoku_value.get(
+                            kwargs.get('check1')),
+                            kwargs.get('check2')),
+                            kwargs.get('check3')),
+                            kwargs.get('check4')),
+                            kwargs.get('check5')),
         return self.PROCESS.get(kwargs.get('handle'))()
 
     def story_board(self, text):
@@ -142,7 +150,7 @@ class Ddp(StoryBoard):
             'check4': TemplateSendMessage(
                 alt_text='ButtonsTemplate',
                 template=ButtonsTemplate(
-                    title='処理結果の表示にUIは使用しますか？',
+                    title='データの利用に即時性は求められますか？',
                     text=text if text else '選択して下さい',
                     actions=[
                         PostbackAction(
@@ -174,7 +182,7 @@ class Ddp(StoryBoard):
             'check5': TemplateSendMessage(
                 alt_text='ButtonsTemplate',
                 template=ButtonsTemplate(
-                    title='処理結果の表示にUIは使用しますか？',
+                    title='分析機能は実装しますか？',
                     text=text if text else '選択して下さい',
                     actions=[
                         PostbackAction(
@@ -186,7 +194,8 @@ class Ddp(StoryBoard):
                                 'check2':'check2',
                                 'check3':'check3',
                                 'check4':'check4',
-                                'check5':'Y'
+                                'check5':'Y',
+                                'process': {'handle': 'DDP_check_processz'}
                             })
                         ),
                         PostbackAction(

@@ -13,7 +13,7 @@ class Process(object):
     def __init__(self):
         pass
 
-    def what_day_of_garbage_is_today(self):
+    def DDP_check_process(self,check1,check2,check3,check4,check5):
         WEEKDAY = [
             '月曜日',
             '火曜日',

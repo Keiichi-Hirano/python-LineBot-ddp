@@ -18,7 +18,7 @@ class StoryBoard(metaclass=abc.ABCMeta):
         pass
 
     @abc.abstractmethod
-    def process_handler(self, kwargs):
+    def process_handler(self, kwargs, datas):
         pass
 
     @abc.abstractmethod

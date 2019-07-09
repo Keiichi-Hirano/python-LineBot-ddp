@@ -71,5 +71,4 @@ class PostbackHandler(object):
         process = data.get('process', None)
         model_instance = MODELS.get(model)()
         print(process,data)
-        return model_instance.process_handler(process,data)
-#        return model_instance.process_handler(process)
+        return model_instance.process_handler(process)

@@ -280,7 +280,7 @@ class Ddp(StoryBoard):
                         )
                     ]
                 )
-            )
+            ),
 # result             
             'result': TemplateSendMessage(
                 alt_text='ButtonsTemplate',

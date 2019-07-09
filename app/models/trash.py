@@ -24,7 +24,7 @@ class Trash(StoryBoard):
             'what_day_of_garbage_is_today': process.what_day_of_garbage_is_today
         }
 
-    def process_handler(self, kwargs,datas):
+    def process_handler(self, kwargs):
         logger.info('process_handler:{}'.format(kwargs))
         return self.PROCESS.get(kwargs.get('handle'))()
 

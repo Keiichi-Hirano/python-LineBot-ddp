@@ -114,7 +114,7 @@ class Ddp(StoryBoard):
 #                    }
 #                    ]
                 )
-            )   
+            ),   
 #            'check1': TemplateSendMessage(
 #                alt_text='ButtonsTemplate',
 #                template=ButtonsTemplate(

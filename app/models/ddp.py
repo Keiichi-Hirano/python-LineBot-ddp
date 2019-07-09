@@ -81,7 +81,7 @@ class Ddp(StoryBoard):
             'check1': TemplateSendMessage(
                 alt_text='ConfirmTemplate',
                 template=ConfirmTemplate(
-                Text='利用するトランデータは CokeOne データですか？',
+                    text='利用するトランデータは CokeOne データですか？',
                     actions=[
                         PostbackAction(
                             label='Yes',

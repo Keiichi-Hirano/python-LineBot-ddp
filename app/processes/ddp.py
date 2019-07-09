@@ -20,10 +20,10 @@ class Process(object):
 #            return '{}は「{}」の日です\n({})'.format(WEEKDAY[weekday], GARBAGE[weekday], DETAIL.get(GARBAGE[weekday]))
             return '{}は「{}」です\n({})'.format('テスト','良好','もうひと息！')
 
-    def _get_week_number(self, date_time):
-        day = date_time.day
-        week_number = 0
-        while day > 0:
-            week_number += 1
-            day -= 7
-        return week_number
+#    def _get_week_number(self, date_time):
+#        day = date_time.day
+#        week_number = 0
+#        while day > 0:
+#            week_number += 1
+#            day -= 7
+#        return week_number

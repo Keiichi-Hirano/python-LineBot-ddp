@@ -25,7 +25,7 @@ class Ddp(StoryBoard):
             'DDP_check_process': process.DDP_check_process
         }
 
-    def process_handler(self, kwargs):
+    def process_handler(self, kwargs,datas):
         logger.info('process_handler:{}'.format(kwargs))
 #        print(kwargs.get('handle'))
 
@@ -34,11 +34,11 @@ class Ddp(StoryBoard):
         print(kwargs.get('check5'))
 
         return self.PROCESS.get(kwargs.get('handle')),
-                            kwargs.get('check1'),
-                            kwargs.get('check2'),
-                            kwargs.get('check3'),
-                            kwargs.get('check4'),
-                            kwargs.get('check5'))
+                            datas.get('check1'),
+                            datas.get('check2'),
+                            datas.get('check3'),
+                            datas.get('check4'),
+                            datas.get('check5'))
 #        process = Process()
 #        res = process.post((kwargs.get('handle')),
 #                            kwargs.get('check1'),

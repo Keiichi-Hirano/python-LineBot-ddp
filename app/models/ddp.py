@@ -78,12 +78,11 @@ class Ddp(StoryBoard):
                 )
             ),
 #  check1 
-            {
             'check1': TemplateSendMessage(
-              altText="this is a confirm template",
-              template: {                
-                "type": "confirm",
-                "Text": "利用するトランデータは CokeOne データですか？",
+                alt_text='ButtonsTemplate',
+                template=ButtonsTemplate(
+                type='confirm',
+                Text='利用するトランデータは CokeOne データですか？',
                     actions=[
                         PostbackAction(
                             label='Yes',
@@ -114,8 +113,8 @@ class Ddp(StoryBoard):
 #                        "text": "no"
 #                    }
 #                    ]
-                }
-            }   
+                )
+            )   
 #            'check1': TemplateSendMessage(
 #                alt_text='ButtonsTemplate',
 #                template=ButtonsTemplate(

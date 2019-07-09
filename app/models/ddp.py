@@ -8,7 +8,7 @@ import json
 import logging
 
 from linebot.models.actions import PostbackAction, URIAction
-from linebot.models.template import ButtonsTemplate, TemplateSendMessage
+from linebot.models.template import ButtonsTemplate, TemplateSendMessage, ConfirmTemplate
 
 from app.framework.nslinebot.models.story_board import StoryBoard
 from app.processes.ddp import Process
@@ -79,9 +79,8 @@ class Ddp(StoryBoard):
             ),
 #  check1 
             'check1': TemplateSendMessage(
-                alt_text='ButtonsTemplate',
-                template=ButtonsTemplate(
-                type='confirm',
+                alt_text='ConfirmTemplate',
+                template=ConfirmTemplate(
                 Text='利用するトランデータは CokeOne データですか？',
                     actions=[
                         PostbackAction(

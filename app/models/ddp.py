@@ -25,7 +25,7 @@ class Ddp(StoryBoard):
             'DDP_check_process': process.DDP_check_process
         }
 
-    def process_handler(self, kwargs,datas):
+    def process_handler(self, kwargs):
         logger.info('process_handler:{}'.format(kwargs))
 #        print(kwargs.get('handle'))
 

@@ -18,7 +18,7 @@ class MainMenu(StoryBoard):
     def __init__(self):
         super().__init__()
 
-    def process_handler(self, kwargs,datas):
+    def process_handler(self, kwargs):
         pass
 
     def story_board(self, text):

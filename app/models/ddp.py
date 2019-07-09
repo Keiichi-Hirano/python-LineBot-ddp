@@ -29,8 +29,8 @@ class Ddp(StoryBoard):
         logger.info('process_handler:{}'.format(kwargs))
 #        process = Process()
 #        res = process.post(dakoku_value.get(kwargs.get('handle')),
-        print(kwargs.get('handle'))
-        res = process.post((kwargs.get('handle')),kwargs.get('user_id'))
+#        print(kwargs.get('handle'))
+#        res = process.post((kwargs.get('handle')),kwargs.get('user_id'))
 #        return '{}\n{}'.format(res.get('message'), res.get('timestamp'))
 
         return self.PROCESS.get(kwargs.get('handle'),

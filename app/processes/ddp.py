@@ -13,9 +13,9 @@ class Process(object):
     def __init__(self):
         pass
 
-    def DDP_check_process(self,check1,check2,check3,check4,check5):
+    def DDP_check_process(self):
+#    def DDP_check_process(self,check1,check2,check3,check4,check5):
 #        if weekday == 2 and week_number == 4:
-#            return '第4{}は「{}」の日です\n({})'.format(WEEKDAY[weekday], '陶磁器/ガラスごみ', DETAIL.get('陶磁器/ガラスごみ'))
 #        else:
 #            return '{}は「{}」の日です\n({})'.format(WEEKDAY[weekday], GARBAGE[weekday], DETAIL.get(GARBAGE[weekday]))
             return '{}は「{}」です\n({})'.format('テスト','良好','もうひと息！')

@@ -29,6 +29,7 @@ class Ddp(StoryBoard):
         logger.info('process_handler:{}'.format(kwargs))
 #        process = Process()
 #        res = process.post(dakoku_value.get(kwargs.get('handle')),
+        print(kwargs.get('handle'))
         return self.PROCESS.get(kwargs.get('handle'),
                             kwargs.get('check1'),
                             kwargs.get('check2'),

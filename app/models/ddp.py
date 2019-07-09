@@ -78,12 +78,13 @@ class Ddp(StoryBoard):
                 )
             ),
 #  check1 
+            {
             'check1': TemplateSendMessage(
                 alt_text='ButtonsTemplate',
-                template=ButtonsTemplate(
-                    title='利用するトランデータは CokeOne データですか？',
-                    text=text if text else '選択して下さい',
-                    actions=[
+            "template": {
+                "type": "confirm",
+                "text": "利用するトランデータは CokeOne データですか？",
+                "actions": [
                         PostbackAction(
                             label='Yes',
                             data=json.dumps({
@@ -100,9 +101,44 @@ class Ddp(StoryBoard):
                                 'check1':'N'
                             })
                         )
+#                    {
+#                        "type": "message",
+#                        "label": "Yes",
+#                        "text": "yes"
+#                    },
+#                    {
+#                        "type": "message",
+#                        "label": "No",
+#                        "text": "no"
+#                    }
                     ]
-                )
-            ),
+                }
+            }   
+#            'check1': TemplateSendMessage(
+#                alt_text='ButtonsTemplate',
+#                template=ButtonsTemplate(
+#                    title='利用するトランデータは CokeOne データですか？',
+#                    text=text if text else '選択して下さい',
+#                    actions=[
+#                        PostbackAction(
+#                            label='Yes',
+#                            data=json.dumps({
+#                                'model': 'ddp',
+#                                'scene': 'check2',
+#                                'check1':'Y'
+#                            })
+#                        ),
+#                        PostbackAction(
+#                            label='No',
+#                            data=json.dumps({
+#                                'scene': 'check2',
+#                                'model': 'ddp',
+#                                'check1':'N'
+#                            })
+#                        )
+#                    ]
+#                )
+#            ),
 #  check2 
             'check2': TemplateSendMessage(
                 alt_text='ButtonsTemplate',
@@ -200,8 +236,8 @@ class Ddp(StoryBoard):
                             label='Yes',
                             data=json.dumps({
                                 'model': 'ddp',
-                                'scene': 'result',
-#                                'scene': 'answer',
+#                                'scene': 'result',
+                                'scene': 'answer',
                                 'check1':'check1',
                                 'check2':'check2',
                                 'check3':'check3',
@@ -213,8 +249,8 @@ class Ddp(StoryBoard):
                         PostbackAction(
                             label='No',
                             data=json.dumps({
-                                'scene': 'result',
-#                                'scene': 'answer',
+#                                'scene': 'result',
+                                'scene': 'answer',
                                 'model': 'ddp',
                                 'check1':'check1',
                                 'check2':'check2',
@@ -227,6 +263,23 @@ class Ddp(StoryBoard):
                     ]
                 )
             ),
+# answer             
+            'answer': TemplateSendMessage(
+                alt_text='ButtonsTemplate',
+                template=ButtonsTemplate(
+                    title='DDP利用メニュー',
+                    text=text if text else '取得できませんでした',
+                    actions=[
+                        PostbackAction(
+                            label='戻る',
+                            data=json.dumps({
+                                'model': 'ddp',
+                                'scene': 'menu'
+                            })
+                        )
+                    ]
+                )
+            )
 # result             
             'result': TemplateSendMessage(
                 alt_text='ButtonsTemplate',

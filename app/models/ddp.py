@@ -80,11 +80,11 @@ class Ddp(StoryBoard):
 #  check1 
             {
             'check1': TemplateSendMessage(
-                alt_text='ButtonsTemplate',
-            "template": {
+              altText="this is a confirm template",
+              template: {                
                 "type": "confirm",
-                "text": "利用するトランデータは CokeOne データですか？",
-                "actions": [
+                "Text": "利用するトランデータは CokeOne データですか？",
+                    actions=[
                         PostbackAction(
                             label='Yes',
                             data=json.dumps({
@@ -101,6 +101,8 @@ class Ddp(StoryBoard):
                                 'check1':'N'
                             })
                         )
+                    ]
+#                "actions": [
 #                    {
 #                        "type": "message",
 #                        "label": "Yes",
@@ -111,7 +113,7 @@ class Ddp(StoryBoard):
 #                        "label": "No",
 #                        "text": "no"
 #                    }
-                    ]
+#                    ]
                 }
             }   
 #            'check1': TemplateSendMessage(

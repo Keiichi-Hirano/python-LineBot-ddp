@@ -33,21 +33,21 @@ class Ddp(StoryBoard):
 #        return '{}\n{}'.format(res.get('message'), res.get('timestamp'))
         print(kwargs.get('check5'))
 
-#        return self.PROCESS.get(kwargs.get('handle'),
-#                            kwargs.get('check1'),
-#                            kwargs.get('check2'),
-#                            kwargs.get('check3'),
-#                            kwargs.get('check4'),
-#                            kwargs.get('check5'))
-        process = Process()
-        res = process.post((kwargs.get('handle')),
+        return self.PROCESS.get(kwargs.get('handle'))(
                             kwargs.get('check1'),
                             kwargs.get('check2'),
                             kwargs.get('check3'),
                             kwargs.get('check4'),
-                            kwargs.get('check5')        
-                            )
-        return '{}\n{}'.format(res.get('message'), res.get('timestamp'))
+                            kwargs.get('check5'))
+#        process = Process()
+#        res = process.post((kwargs.get('handle')),
+#                            kwargs.get('check1'),
+#                            kwargs.get('check2'),
+#                            kwargs.get('check3'),
+#                            kwargs.get('check4'),
+#                            kwargs.get('check5')        
+#                            )
+#        return '{}\n{}'.format(res.get('message'), res.get('timestamp'))
 
     def story_board(self, text):
         return {

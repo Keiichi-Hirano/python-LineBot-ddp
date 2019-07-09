@@ -29,12 +29,6 @@ class Ddp(StoryBoard):
 #        logger.info('process_handler:{}'.format(kwargs))
 #        return self.PROCESS.get(kwargs.get('handle'))()
         logger.info('process_handler:{}'.format(kwargs))
-#        print(kwargs.get('handle'))
-
-#        res = process.post((kwargs.get('handle')),kwargs.get('user_id'))
-#        return '{}\n{}'.format(res.get('message'), res.get('timestamp'))
-#        print(kwargs.get('check5'))
-
         return self.PROCESS.get(kwargs.get('handle'))()
         #,(
         #datas.get('check1'),

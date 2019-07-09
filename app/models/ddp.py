@@ -34,11 +34,11 @@ class Ddp(StoryBoard):
         print(kwargs.get('check5'))
 
         return self.PROCESS.get(kwargs.get('handle')),
-                            datas.get('check1'),
-                            datas.get('check2'),
-                            datas.get('check3'),
-                            datas.get('check4'),
-                            datas.get('check5'))
+        datas.get('check1'),
+        datas.get('check2'),
+        datas.get('check3'),
+        datas.get('check4'),
+        datas.get('check5'))
 #        process = Process()
 #        res = process.post((kwargs.get('handle')),
 #                            kwargs.get('check1'),

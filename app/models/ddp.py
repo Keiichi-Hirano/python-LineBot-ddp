@@ -31,11 +31,16 @@ class Ddp(StoryBoard):
         logger.info('process_handler:{}'.format(kwargs))
 #        return self.PROCESS.get(kwargs.get('handle'))()
         return self.PROCESS.get(kwargs.get('handle'))(
-        datas.get('check1'),
-        datas.get('check2'),
-        datas.get('check3'),
-        datas.get('check4'),
-        datas.get('check5'))
+        kwargs.get('check1'),
+        kwargs.get('check2'),
+        kwargs.get('check3'),
+        kwargs.get('check4'),
+        kwargs.get('check5'))
+#        datas.get('check1'),
+#        datas.get('check2'),
+#        datas.get('check3'),
+#        datas.get('check4'),
+#        datas.get('check5'))
 #        process = Process()
 #        res = process.post((kwargs.get('handle')),
 #                            kwargs.get('check1'),

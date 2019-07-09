@@ -100,45 +100,8 @@ class Ddp(StoryBoard):
                             })
                         )
                     ]
-#                "actions": [
-#                    {
-#                        "type": "message",
-#                        "label": "Yes",
-#                        "text": "yes"
-#                    },
-#                    {
-#                        "type": "message",
-#                        "label": "No",
-#                        "text": "no"
-#                    }
-#                    ]
                 )
             ),   
-#            'check1': TemplateSendMessage(
-#                alt_text='ButtonsTemplate',
-#                template=ButtonsTemplate(
-#                    title='利用するトランデータは CokeOne データですか？',
-#                    text=text if text else '選択して下さい',
-#                    actions=[
-#                        PostbackAction(
-#                            label='Yes',
-#                            data=json.dumps({
-#                                'model': 'ddp',
-#                                'scene': 'check2',
-#                                'check1':'Y'
-#                            })
-#                        ),
-#                        PostbackAction(
-#                            label='No',
-#                            data=json.dumps({
-#                                'scene': 'check2',
-#                                'model': 'ddp',
-#                                'check1':'N'
-#                            })
-#                        )
-#                    ]
-#                )
-#            ),
 #  check2 
             'check2': TemplateSendMessage(
                 alt_text='ButtonsTemplate',

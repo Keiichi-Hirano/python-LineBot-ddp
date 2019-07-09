@@ -27,4 +27,3 @@ class Process(object):
 #            week_number += 1
 #            day -= 7
 #        return week_number
-    def DDP_check_process(self,check1,check2,check3,check4,check5):

@@ -198,8 +198,8 @@ class Ddp(StoryBoard):
                             label='Yes',
                             data=json.dumps({
                                 'model': 'ddp',
-#                                'scene': 'result',
-                                'scene': 'answer',
+                                'scene': 'result',
+#                                'scene': 'answer',
                                 'check1':'check1',
                                 'check2':'check2',
                                 'check3':'check3',
@@ -211,9 +211,9 @@ class Ddp(StoryBoard):
                         PostbackAction(
                             label='No',
                             data=json.dumps({
-#                                'scene': 'result',
-                                'scene': 'answer',
                                 'model': 'ddp',
+                                'scene': 'result',
+#                                'scene': 'answer',
                                 'check1':'check1',
                                 'check2':'check2',
                                 'check3':'check3',
@@ -226,9 +226,7 @@ class Ddp(StoryBoard):
                 )
             ),
 # answer             
-            'answer': TextMessage(
-                text=text
-            ),
+            'answer': TextMessage(text=text),
 # result             
             'result': TemplateSendMessage(
                 alt_text='ButtonsTemplate',

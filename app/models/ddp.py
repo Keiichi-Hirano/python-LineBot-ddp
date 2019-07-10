@@ -106,8 +106,12 @@ class Ddp(StoryBoard):
 #                                'check1':'check1',
 #                                'check2':'Y'
                                 'scene': 'answer',
+                                'process': {'handle': 'DDP_check_process',
                                 'check1':'check1',
-                                'check2':'Y'
+                                'check2':'check2',
+                                'check3':'check3',
+                                'check4':'check4',
+                                'check5':'Y'}
                             })
                         ),
                         PostbackAction(

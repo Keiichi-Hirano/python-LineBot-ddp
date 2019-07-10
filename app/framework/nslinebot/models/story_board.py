@@ -25,7 +25,7 @@ class StoryBoard(metaclass=abc.ABCMeta):
     def story_board(self, check_T, text):
         pass
 
-    def get_message(self, text):
+    def get_message(self, check_T, text):
         logger.info('get_message:{}'.format(text))
         return TextSendMessage(text=text)
 

@@ -23,6 +23,7 @@ class StoryBoard(metaclass=abc.ABCMeta):
 
     @abc.abstractmethod
     def story_board(self, text):
+#    def story_board(self, check_T, text):
         pass
 
     def get_message(self, text):

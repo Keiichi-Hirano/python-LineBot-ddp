@@ -46,8 +46,8 @@ class MessageHandler(object):
 #        print('table_check',check_T)
         text = model_instance.process_handler(process) if process else None
 #        messages = model_instance.get_template(scene, text)
-        print('table_check',text)
-        messages = model_instance.get_template(scene, check_T, text)
+#        print('table_check',text)
+        messages = model_instance.get_template(scene, text)
         Messenger().send(self.line_bot_api, self.event.reply_token, messages, method)
 
 # models配下のpythonを起動してる？

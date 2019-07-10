@@ -13,7 +13,6 @@ from linebot.models.template import ButtonsTemplate, TemplateSendMessage, Confir
 from linebot.models.messages import TextMessage
 #from linebot.models.send_messages import TextSendMessage
 
-
 #
 from app.framework.nslinebot.models.story_board import StoryBoard
 from app.processes.ddp import Process
@@ -209,7 +208,8 @@ class Ddp(StoryBoard):
                                 'check2':'check2',
                                 'check3':'check3',
                                 'check4':'check4',
-                                'check5':'Y'}
+                                'check5':self.event.get('data')}
+#                                'check5':'Y'}
 #                                'check1':'check1',
 #                                'check2':'check2',
 #                                'check3':'check3',

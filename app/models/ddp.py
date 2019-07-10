@@ -6,15 +6,19 @@ python version  : 3.7.3
 import datetime
 import json
 import logging
-
+#
 from linebot.models.actions import PostbackAction, URIAction
 from linebot.models.template import ButtonsTemplate, TemplateSendMessage, ConfirmTemplate
+#from linebot.models.send_messages import messages
+from linebot.models.messages import TextMessage
+#from linebot.models.send_messages import TextSendMessage
 
+
+#
 from app.framework.nslinebot.models.story_board import StoryBoard
 from app.processes.ddp import Process
 
 # DDP_check_process
-
 logger = logging.getLogger(__name__)
 
 class Ddp(StoryBoard):
@@ -26,30 +30,13 @@ class Ddp(StoryBoard):
         }
 
     def process_handler(self, kwargs):
-#        logger.info('process_handler:{}'.format(kwargs))
-#        return self.PROCESS.get(kwargs.get('handle'))()
         logger.info('process_handler:{}'.format(kwargs))
-#        return self.PROCESS.get(kwargs.get('handle'))()
         return self.PROCESS.get(kwargs.get('handle'))(
         kwargs.get('check1'),
         kwargs.get('check2'),
         kwargs.get('check3'),
         kwargs.get('check4'),
         kwargs.get('check5'))
-#        datas.get('check1'),
-#        datas.get('check2'),
-#        datas.get('check3'),
-#        datas.get('check4'),
-#        datas.get('check5'))
-#        process = Process()
-#        res = process.post((kwargs.get('handle')),
-#                            kwargs.get('check1'),
-#                            kwargs.get('check2'),
-#                            kwargs.get('check3'),
-#                            kwargs.get('check4'),
-#                            kwargs.get('check5')        
-#                            )
-#        return '{}\n{}'.format(res.get('message'), res.get('timestamp'))
 
     def story_board(self, text):
         return {
@@ -104,10 +91,13 @@ class Ddp(StoryBoard):
             ),   
 #  check2 
             'check2': TemplateSendMessage(
-                alt_text='ButtonsTemplate',
-                template=ButtonsTemplate(
-                    title='データは参照のみですか？更新用件はありませんか？',
-                    text=text if text else '選択して下さい',
+#                alt_text='ButtonsTemplate',
+#                template=ButtonsTemplate(
+#                    title='データは参照のみですか？更新用件はありませんか？',
+#                    text=text if text else '選択して下さい',
+                alt_text='ConfirmTemplate',
+                template=ConfirmTemplate(
+                    text='データは参照のみですか？更新用件はありませんか？',
                     actions=[
                         PostbackAction(
                             label='Yes',
@@ -132,10 +122,13 @@ class Ddp(StoryBoard):
             ),
 #  check3 
             'check3': TemplateSendMessage(
-                alt_text='ButtonsTemplate',
-                template=ButtonsTemplate(
-                    title='処理結果の表示にUIは使用しますか？',
-                    text=text if text else '選択して下さい',
+#                alt_text='ButtonsTemplate',
+#                template=ButtonsTemplate(
+#                    title='処理結果の表示にUIは使用しますか？',
+#                    text=text if text else '選択して下さい',
+                alt_text='ConfirmTemplate',
+                template=ConfirmTemplate(
+                    text='処理結果の表示にUIは使用しますか？',
                     actions=[
                         PostbackAction(
                             label='Yes',
@@ -158,10 +151,13 @@ class Ddp(StoryBoard):
             ),
 #  check4 
             'check4': TemplateSendMessage(
-                alt_text='ButtonsTemplate',
-                template=ButtonsTemplate(
-                    title='データの利用に即時性は求められますか？',
-                    text=text if text else '選択して下さい',
+#                alt_text='ButtonsTemplate',
+#                template=ButtonsTemplate(
+#                    title='データの利用に即時性は求められますか？',
+#                    text=text if text else '選択して下さい',
+                alt_text='ConfirmTemplate',
+                template=ConfirmTemplate(
+                    text='データの利用に即時性は求められますか？',
                     actions=[
                         PostbackAction(
                             label='Yes',
@@ -190,10 +186,13 @@ class Ddp(StoryBoard):
             ),
 #  check5 
             'check5': TemplateSendMessage(
-                alt_text='ButtonsTemplate',
-                template=ButtonsTemplate(
-                    title='分析機能は実装しますか？',
-                    text=text if text else '選択して下さい',
+#                alt_text='ButtonsTemplate',
+#                template=ButtonsTemplate(
+#                    title='分析機能は実装しますか？',
+#                    text=text if text else '選択して下さい',
+                alt_text='ConfirmTemplate',
+                template=ConfirmTemplate(
+                    text='分析機能は実装しますか？',
                     actions=[
                         PostbackAction(
                             label='Yes',
@@ -227,20 +226,8 @@ class Ddp(StoryBoard):
                 )
             ),
 # answer             
-            'answer': TemplateSendMessage(
-                alt_text='ButtonsTemplate',
-                template=ButtonsTemplate(
-                    title='DDP利用メニュー',
-                    text=text if text else '取得できませんでした',
-                    actions=[
-                        PostbackAction(
-                            label='戻る',
-                            data=json.dumps({
-                                'model': 'ddp',
-                                'scene': 'menu'
-                            })
-                        )
-                    ]
+            'answer': TextMessage(
+                text=text
                 )
             ),
 # result             

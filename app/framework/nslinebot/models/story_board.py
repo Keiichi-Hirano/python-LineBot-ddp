@@ -29,6 +29,7 @@ class StoryBoard(metaclass=abc.ABCMeta):
         logger.info('get_message:{}'.format(text))
         return TextSendMessage(text=text)
 
-    def get_template(self, scene,  check_T, text=None):
+    def get_template(self, scene, check_T, text=None):
         logger.info('get_template:{}'.format(scene))
-        return self.story_board(text).get(scene, None)
+#        return self.story_board(text).get(scene, None)
+        return self.story_board(text).get(scene, check_T, None)

@@ -228,7 +228,6 @@ class Ddp(StoryBoard):
 # answer             
             'answer': TextMessage(
                 text=text
-                )
             ),
 # result             
             'result': TemplateSendMessage(

@@ -102,7 +102,10 @@ class Ddp(StoryBoard):
                             label='Yes',
                             data=json.dumps({
                                 'model': 'ddp',
-                                'scene': 'check3',
+#                                'scene': 'check3',
+#                                'check1':'check1',
+#                                'check2':'Y'
+                                'scene': 'answer',
                                 'check1':'check1',
                                 'check2':'Y'
                             })
@@ -208,7 +211,7 @@ class Ddp(StoryBoard):
                                 'check2':'check2',
                                 'check3':'check3',
                                 'check4':'check4',
-                                'check5':self}
+                                'check5':'Y'}
 #                                'check5':'Y'}
 #                                'check1':'check1',
 #                                'check2':'check2',

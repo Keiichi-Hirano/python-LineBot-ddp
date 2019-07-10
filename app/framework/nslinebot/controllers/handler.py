@@ -37,6 +37,13 @@ class MessageHandler(object):
         process = event_data.get('process', None)
         method = event_data.get('method', 'reply')
         model_instance = MODELS.get(model)()
+        check = {}
+        check['check1'] = event_data.get('check1')
+        check['check2'] = event_data.get('check2')
+        check['check3'] = event_data.get('check3')
+        check['check4'] = event_data.get('check4')
+        check['check5'] = event_data.get('check5')
+        print(check)
 
         text = model_instance.process_handler(process) if process else None
         messages = model_instance.get_template(scene, text)

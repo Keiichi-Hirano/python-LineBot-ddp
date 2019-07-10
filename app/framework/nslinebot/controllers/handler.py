@@ -43,7 +43,7 @@ class MessageHandler(object):
         check['check3'] = event_data.get('check3')
         check['check4'] = event_data.get('check4')
         check['check5'] = event_data.get('check5')
-        print('check',check)
+        print('table_check',check)
 
         text = model_instance.process_handler(process) if process else None
         messages = model_instance.get_template(scene, text)

@@ -38,7 +38,7 @@ class Ddp(StoryBoard):
         kwargs.get('check5'))
 
 #    def story_board(self, text):
-    def story_board(self, check_T, text):
+    def story_board(self, text):
         return {
 # menu            
             'menu': TemplateSendMessage(

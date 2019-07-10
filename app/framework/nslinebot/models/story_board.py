@@ -31,5 +31,5 @@ class StoryBoard(metaclass=abc.ABCMeta):
 
     def get_template(self, scene, text=None):
         logger.info('get_template:{}'.format(scene))
-#        return self.story_board(text).get(scene, None)
-        return self.story_board(text).get(scene, check_T, None)
+        return self.story_board(text).get(scene, None)
+#        return self.story_board(text).get(scene, check_T, None)

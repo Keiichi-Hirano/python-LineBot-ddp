@@ -104,7 +104,7 @@ class Ddp(StoryBoard):
                             data=json.dumps({
                                 'model': 'ddp',
                                 'scene': 'check3',
-                                'check1':check1,
+                                'check1':'check1',
                                 'check2':'Y'
                             })
                         ),
@@ -113,7 +113,7 @@ class Ddp(StoryBoard):
                             data=json.dumps({
                                 'scene': 'check3',
                                 'model': 'ddp',
-                                'check1':check1,
+                                'check1':'check1',
                                 'check2':'N'
                             })
                         )
@@ -135,8 +135,8 @@ class Ddp(StoryBoard):
                             data=json.dumps({
                                 'scene': 'check4',
                                 'model': 'ddp',
-                                'check1':check1,
-                                'check2':check2,
+                                'check1':'check1',
+                                'check2':'check2',
                                 'check3':'Y'
                             })
                         ),
@@ -145,8 +145,8 @@ class Ddp(StoryBoard):
                             data=json.dumps({
                                 'scene': 'check4',
                                 'model': 'ddp',
-                                'check1':check1,
-                                'check2':check2,
+                                'check1':'check1',
+                                'check2':'check2',
                                 'check3':'N'
                             })
                         )
@@ -168,9 +168,9 @@ class Ddp(StoryBoard):
                             data=json.dumps({
                                 'model': 'ddp',
                                 'scene': 'check5',
-                                'check1':check1,
-                                'check2':check2,
-                                'check3':check3,
+                                'check1':'check1',
+                                'check2':'check2',
+                                'check3':'check3',
                                 'check4':'Y'
                             })
                         ),
@@ -179,9 +179,9 @@ class Ddp(StoryBoard):
                             data=json.dumps({
                                 'scene': 'check5',
                                 'model': 'ddp',
-                                'check1':check1,
-                                'check2':check2,
-                                'check3':check3,
+                                'check1':'check1',
+                                'check2':'check2',
+                                'check3':'check3',
                                 'check4':'N'
                             })
                         )
@@ -205,10 +205,10 @@ class Ddp(StoryBoard):
                                 'scene': 'result',
 #                                'scene': 'answer',
                                 'process': {'handle': 'DDP_check_process',
-                                'check1':check1,
-                                'check2':check2,
-                                'check3':check3,
-                                'check4':check4,
+                                'check1':'check1',
+                                'check2':'check2',
+                                'check3':'check3',
+                                'check4':'check4',
                                 'check5':'Y'}
 #                                'check1':'check1',
 #                                'check2':'check2',
@@ -224,10 +224,10 @@ class Ddp(StoryBoard):
                                 'model': 'ddp',
                                 'scene': 'result',
 #                                'scene': 'answer',
-                                'check1':check1,
-                                'check2':check2,
-                                'check3':check3,
-                                'check4':check4,
+                                'check1':'check1',
+                                'check2':'check2',
+                                'check3':'check3',
+                                'check4':'check4',
                                 'check5':'N',
                                 'process': {'handle': 'DDP_check_process'}
                             })

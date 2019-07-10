@@ -28,7 +28,8 @@ class Trash(StoryBoard):
         logger.info('process_handler:{}'.format(kwargs))
         return self.PROCESS.get(kwargs.get('handle'))()
 
-    def story_board(self, text):
+#    def story_board(self, text):
+    def story_board(self, text, check_T):
         return {
             'menu': TemplateSendMessage(
                 alt_text='ButtonsTemplate',

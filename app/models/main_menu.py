@@ -21,7 +21,8 @@ class MainMenu(StoryBoard):
     def process_handler(self, kwargs):
         pass
 
-    def story_board(self, text):
+#    def story_board(self, text):
+    def story_board(self, text, check_T):
         return {
             'menu': TemplateSendMessage(
                 alt_text='ButtonsTemplate',

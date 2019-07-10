@@ -98,7 +98,7 @@ class Ddp(StoryBoard):
                 template=ConfirmTemplate(
                     text='データは参照のみですか？更新用件はありませんか？',
                     actions=[
-                        PostbackAction(
+                        PostbackAction(\
                             label='Yes',
                             data=json.dumps({
                                 'model': 'ddp',
@@ -208,7 +208,7 @@ class Ddp(StoryBoard):
                                 'check2':'check2',
                                 'check3':'check3',
                                 'check4':'check4',
-                                'check5':self.event.get('data')}
+                                'check5':self}
 #                                'check5':'Y'}
 #                                'check1':'check1',
 #                                'check2':'check2',

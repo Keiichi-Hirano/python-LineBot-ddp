@@ -45,7 +45,7 @@ class ClockIn(StoryBoard):
         return '{}\n{}'.format(res.get('message'), res.get('timestamp'))
 
 #    def story_board(self, text):
-    def story_board(self, text, check_T):
+    def story_board(self, check_T, text):
         return {
             'menu': TemplateSendMessage(
                 alt_text='ButtonsTemplate',

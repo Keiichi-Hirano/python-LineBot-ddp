@@ -21,7 +21,7 @@ class Messenger(object):
         self._SEND.get(method)(line_bot_api, reply_token, messages, check_T)
 
 # 返信
-    def _reply_message(self, line_bot_api, reply_token, messages):
+    def _reply_message(self, line_bot_api, reply_token, messages, check_T):
         logger.info('_reply_message:{}'.format(messages))
 #        print(messages)
         line_bot_api.reply_message(reply_token, messages, timeout=None)

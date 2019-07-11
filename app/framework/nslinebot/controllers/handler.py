@@ -48,7 +48,7 @@ class MessageHandler(object):
 #        messages = model_instance.get_template(scene, text)
 #        print('table_check',text)
         messages = model_instance.get_template(scene, text)
-        Messenger().send(self.line_bot_api, self.event.reply_token, messages, method, check_T)
+        Messenger().send(self.line_bot_api, self.event.reply_token, messages, method)
 
 # models配下のpythonを起動してる？
     def _get_message_event(self):

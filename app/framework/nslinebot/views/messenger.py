@@ -17,14 +17,14 @@ class Messenger(object):
         }
 
 # 送信
-    def send(self, line_bot_api, reply_token, messages, method, check_T):
-        self._SEND.get(method)(line_bot_api, reply_token, messages, check_T)
+    def send(self, line_bot_api, reply_token, messages, method):
+        self._SEND.get(method)(line_bot_api, reply_token, messages)
 
 # 返信
-    def _reply_message(self, line_bot_api, reply_token, messages, check_T):
+    def _reply_message(self, line_bot_api, reply_token, messages):
         logger.info('_reply_message:{}'.format(messages))
 #        print(messages)
-        line_bot_api.reply_message(reply_token, messages, check_T, timeout=None)
+        line_bot_api.reply_message(reply_token, messages, timeout=None)
 
 # プッシュメッセージ
     def _push_message(self, line_bot_api, to, messages):

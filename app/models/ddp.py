@@ -108,7 +108,10 @@ class Ddp(StoryBoard):
 #                                'check2':'Y'
                                 'scene': 'answer',
                                 'process': {'handle': 'DDP_check_process',
-                                'check1':'check1',
+                                'check1':if check1 != 'Y':
+                                    'Y'
+                                else:
+                                    'N',
                                 'check2':'Y'}
                             })
                         ),
@@ -123,7 +126,6 @@ class Ddp(StoryBoard):
                         )
                     ]
                 )
-                kwargs=check_T
             ),
 #  check3 
             'check3': TemplateSendMessage(

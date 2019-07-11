@@ -17,8 +17,8 @@ class Messenger(object):
         }
 
 # 送信
-    def send(self, line_bot_api, reply_token, messages, method):
-        self._SEND.get(method)(line_bot_api, reply_token, messages)
+    def send(self, line_bot_api, reply_token, messages, method, check_T):
+        self._SEND.get(method)(line_bot_api, reply_token, messages, check_T)
 
 # 返信
     def _reply_message(self, line_bot_api, reply_token, messages):

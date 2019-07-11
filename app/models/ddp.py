@@ -184,7 +184,7 @@ class Ddp(StoryBoard):
                                 'scene': 'check4',
                                 'model': 'ddp',
                                 'check1':'Y',
-                                'check2':'N'
+                                'check2':'N',
                                 'check3':'Y'
                             })
                         ),
@@ -194,7 +194,7 @@ class Ddp(StoryBoard):
                                 'scene': 'check4',
                                 'model': 'ddp',
                                 'check1':'Y',
-                                'check2':'N'
+                                'check2':'N',
                                 'check3':'N'
                             })
                         )

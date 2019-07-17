@@ -37,16 +37,7 @@ class MessageHandler(object):
         process = event_data.get('process', None)
         method = event_data.get('method', 'reply')
         model_instance = MODELS.get(model)()
-#        check_T = {}
-#        check_T['check1'] = event_data.get('check1')
-#        check_T['check2'] = event_data.get('check2')
-#        check_T['check3'] = event_data.get('check3')
-#        check_T['check4'] = event_data.get('check4')
-#        check_T['check5'] = event_data.get('check5')
-#        print('table_check',check_T)
         text = model_instance.process_handler(process) if process else None
-#        messages = model_instance.get_template(scene, text)
-#        print('table_check',text)
         messages = model_instance.get_template(scene, text)
         Messenger().send(self.line_bot_api, self.event.reply_token, messages, method)
 

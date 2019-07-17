@@ -9,6 +9,8 @@ import logging
 from app.framework.nslinebot.views.messenger import Messenger
 from app.models import MESSAGE_MODELS, MODELS   
 
+#menu_text = {'メニュー', 'うん','そう','Yes','Y','ええ','だな','です','ええ','そだね'}
+
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
@@ -43,7 +45,18 @@ class MessageHandler(object):
 
 # models配下のpythonを起動してる？
     def _get_message_event(self):
-        return MESSAGE_MODELS.get(self.event.message.text, None)
+        original = self.event.message.text
+        r_text = ''
+        if original in ('勤怠'):
+            r_text = '勤怠メニュー'
+        elif  original in ('ごみ'):
+            r_text = 'ごみ出しメニュー'
+        elif  original in ('DDP'):
+            r_text = 'DDP利用メニュー'            
+        else:
+            r_text = 'メインメニュー'
+#        return MESSAGE_MODELS.get(self.event.message.text, None)
+        return MESSAGE_MODELS.get(r_text, None)
 
 # json load で過去のやり取りを取得している？ 
     def _get_postback_event(self):

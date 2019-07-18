@@ -53,8 +53,10 @@ class MessageHandler(object):
             r_text = 'ごみ出しメニュー'
         elif  original in ('DDP','ddp','Ddp'):
             r_text = 'DDP利用メニュー'
-        else:
+        elif  original in ('メニュ','めにゅ'):
             r_text = 'メインメニュー'
+        else:
+            r_text = 'noanswer'
 #        return MESSAGE_MODELS.get(self.event.message.text, None)
         return MESSAGE_MODELS.get(r_text, None)
 

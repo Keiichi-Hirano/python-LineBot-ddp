@@ -55,7 +55,7 @@ class MessageHandler(object):
             r_text = 'DDP利用メニュー'
         elif  original in ('メニュ','めにゅ','メインメニュー'):
             r_text = 'メインメニュー'
-        else:s
+        else:
             r_text = 'noanswer'
 
 #        return MESSAGE_MODELS.get(self.event.message.text, None)

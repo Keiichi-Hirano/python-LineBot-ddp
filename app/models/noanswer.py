@@ -21,7 +21,7 @@ class noanswer(StoryBoard):
         super().__init__()
         process = Process()
         self.PROCESS = {
-            'noanswer': process.what_day_of_garbage_is_today
+            'noanswer_pro': process.what_day_of_garbage_is_today
         }
 
     def process_handler(self, kwargs):
@@ -31,5 +31,5 @@ class noanswer(StoryBoard):
     def story_board(self, text):
         return {
 # answer             
-            'noanswer': TextMessage(text='すみません。返答できません。')
+            'answer': TextMessage(text='すみません。返答できません。')
         }

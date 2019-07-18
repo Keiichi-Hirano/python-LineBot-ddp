@@ -32,9 +32,9 @@ MESSAGE_MODELS = {
         'model': 'ddp',
         'scene': 'menu'
     },
-        'noanswer': {
+    'noanswer': {
         'model': 'noanswer',
-        'scene': 'noanswer'
+        'scene': 'answer'
 # 2019/07/03 add end 
     }
 }

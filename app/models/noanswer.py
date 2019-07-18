@@ -12,6 +12,7 @@ from linebot.models.template import ButtonsTemplate, TemplateSendMessage
 
 from app.framework.nslinebot.models.story_board import StoryBoard
 from app.processes.trash import Process
+from linebot.models.messages import TextMessage
 
 logger = logging.getLogger(__name__)
 

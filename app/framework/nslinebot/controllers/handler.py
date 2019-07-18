@@ -33,6 +33,7 @@ class MessageHandler(object):
         event_data = self._GET_EVENT.get(self.event_type)()
         if event_data is None:
 #            
+            method = event_data.get('method', 'reply')
             Messenger().send(self.line_bot_api, self.event.reply_token, '答えられません', method)
             return
 

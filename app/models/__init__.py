@@ -31,6 +31,10 @@ MESSAGE_MODELS = {
     'DDP利用メニュー': {
         'model': 'ddp',
         'scene': 'menu'
+    },
+    'noanswer': {
+        'model': 'ddp',
+        'scene': 'menu'    
 # 2019/07/03 add end 
     }
 }

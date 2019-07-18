@@ -32,6 +32,8 @@ class MessageHandler(object):
         logger.info('handle_event:{}'.format(self.event))
         event_data = self._GET_EVENT.get(self.event_type)()
         if event_data is None:
+#            
+            Messenger().send(self.line_bot_api, self.event.reply_token, '答えられません', method)
             return
 
         model = event_data.get('model')
@@ -55,8 +57,6 @@ class MessageHandler(object):
             r_text = 'DDP利用メニュー'
         elif  original in ('メニュ','めにゅ'):
             r_text = 'メインメニュー'
-        else:
-            r_text = 'noanswer'
 #        return MESSAGE_MODELS.get(self.event.message.text, None)
         return MESSAGE_MODELS.get(r_text, None)
 

@@ -2,6 +2,7 @@ from .clock_in import ClockIn
 from .main_menu import MainMenu
 from .trash import Trash
 from .ddp import  Ddp
+from .noanswer import  noanswer
 
 MODELS = {
     'main_menu': MainMenu,
@@ -9,7 +10,8 @@ MODELS = {
 # 2019/07/03 add start 
 # DDP条件メニュー
     'trash': Trash,
-    'ddp': Ddp
+    'ddp': Ddp,
+    'noanswer':noanswer
 # 2019/07/03 add end 
 }
 

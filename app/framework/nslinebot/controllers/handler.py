@@ -55,7 +55,7 @@ class MessageHandler(object):
             r_text = 'メインメニュー'
         else:
             r_text = 'noanswer'
-
+#
 #        return MESSAGE_MODELS.get(self.event.message.text, None)
         return MESSAGE_MODELS.get(r_text, None)
 

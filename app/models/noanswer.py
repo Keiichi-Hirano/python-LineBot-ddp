@@ -32,5 +32,5 @@ class noanswer(StoryBoard):
     def story_board(self, text):
         return {
 # answer             
-            'answer': TextMessage(text='すみません。会話を理解できませんでした。' + '\n' + '[メニュー]と頂ければメインメニューを表示しますよ。')
+            'answer': TextMessage(text='すみません。会話を理解できませんでした。' + '\n' + '[メニュー]と頂ければメインメニューを表示できますよ。')
         }

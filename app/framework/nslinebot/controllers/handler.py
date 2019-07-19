@@ -9,8 +9,6 @@ import logging
 from app.framework.nslinebot.views.messenger import Messenger
 from app.models import MESSAGE_MODELS, MODELS   
 
-#menu_text = {'メニュー', 'うん','そう','Yes','Y','ええ','だな','です','ええ','そだね'}
-
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 

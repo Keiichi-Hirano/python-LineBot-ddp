@@ -48,7 +48,7 @@ def callback():
     try:
         handler.handle(body, signature)
     except InvalidSignatureError:
-        abort(400)
+        abort(300)
     return 'OK', 200
 
 ## 2 ##
@@ -63,7 +63,7 @@ def on_message(event):
 # Postback：Webページのフォームのデータ送信先として、そのページ自体を指定する方式。
 # WebブラウザからWebサーバにデータを送信し、
 # 送信元ページと同じページにデータの内容の反映を繰り返す 
-# Line上のやりとりを同じ所に繰り返す
+# Line上のやりとりを同じ所に繰り返す  
 ###############################################
 @handler.add(PostbackEvent)
 def on_postback(event):
@@ -75,7 +75,7 @@ def on_postback(event):
 @app.route('/liff/<model>', methods=['GET'])
 def liff(model=None):
     if model is None:
-        return 'OK', 200
+        return 'OK', 200    
     return render_template('{}.html'.format(model)), 200
 
 ###############################################
@@ -94,6 +94,6 @@ def postback():
 if __name__ == '__main__':
     host = os.getenv('HOST', '0.0.0.0')
     port = int(os.getenv('PORT', 5000))
-    app.run(host=host, port=port, debug=True)
+    app.run(host=host, port=port, debug=True)   
 #    app.run(host=host, port=port)
 #

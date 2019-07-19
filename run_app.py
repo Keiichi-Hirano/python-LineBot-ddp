@@ -48,7 +48,7 @@ def callback():
     try:
         handler.handle(body, signature)
     except InvalidSignatureError:
-        abort(200)
+        abort(400)
     return 'OK', 200
 
 ## 2 ##
@@ -96,4 +96,3 @@ if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
     app.run(host=host, port=port, debug=True)   
 #    app.run(host=host, port=port)
-#

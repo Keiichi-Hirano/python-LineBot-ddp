@@ -45,50 +45,72 @@ class Process(object):
 #        else:
 #            return '{}は「{}」の日です\n({})'.format(WEEKDAY[weekday], GARBAGE[weekday], DETAIL.get(GARBAGE[weekday]))
 #            return '{}は「{}」です\n({})'.format('テスト','良好','もうひと息！')
-        if check1 == 'Y':
 #       CokeOne Transaction
-            if check2 == 'Y':
+        if check1 == 'Y':
 #           CokeOne read only
-                if check4 == 'Y':
+            if check2 == 'Y':
 #               Realtime
+                if check4 == 'Y':
                     DB_answer = HANA
                     Logic_answer = ABAP
+#                   Use UI                        
                     if check3 == 'Y':
                         Pre_answer = UI5
                     else:
                         Pre_answer = Export_File                               
-                else:                
 #               Non-Realtime
+                else:                
                     DB_answer = MarkLogic
                     Logic_answer = Abinito
-                    if check5 == 'Y':
-#                       Analytics
-                        DB_answer = DB_answer + Hadoop
-                        Logic_answer = Logic_answer + Python
-                        Pre_answer = BI_tool
-                    else:                
-#                       Non-Analytics
-                        pass
+#                   Use UI                        
                     if check3 == 'Y':
                         Pre_answer = HTML5
+#                   Non-Use UI                        
                     else:
                         Pre_answer = Export_File                               
+#                   Analytics
+                    if check5 == 'Y':
+                        DB_answer = DB_answer + Hadoop
+                        Logic_answer = Logic_answer + Python
+#                   Non-Analytics
+                    else:                
+                        pass
+#                   Use UI + Analytics
+                    if check3 == 'Y' and check5 == 'Y':     
+                        Pre_answer = Pre_answer + BI_tool
             else:
 #           CokeOne CRUD
                 DB_answer = CokeOne
                 Logic_answer = ABAP
+#               Use UI                        
                 if check3 == 'Y':
                     Pre_answer = SAP_GUI
+#               Non-Use UI                        
                 else:
                     Pre_answer = Export_File
-        else:
 #       CokeOne Transaction以外
+        else:
             DB_answer = RDBMS + MarkLogic
             Logic_answer = Abinito
-
-
-
-
+#           Use UI
+            if check3 == 'Y':
+                Pre_answer = HTML5
+#           Non-Use UI
+            else:
+                Pre_answer = Export_File                               
+#           Analytics
+            if check5 == 'Y':
+                DB_answer = DB_answer + Hadoop
+                Logic_answer = Logic_answer + Python
+#           Non-Analytics
+            else:                
+                pass
+#           Use UI + Analytics
+            if check3 == 'Y' and check5 == 'Y':     
+                Pre_answer = Pre_answer + BI_tool
+#           Realtime
+            if check4 == 'Y':
+                Logic_answer = Logic_answer + JAVA
 #        return '1は{}・2は{}・3は{}・4は{}・5は{}です\n'.format(check1,check2,check3,check4,check5)
         return 'DBは{}\n・開発言語は{}\n・プレゼンテーション機能は{}になります。'.format(DB_answer,Logic_answer,Pre_answer)
 

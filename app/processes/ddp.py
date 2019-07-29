@@ -70,14 +70,14 @@ class Process(object):
                         Pre_answer = Export_File                               
 #                   Analytics
                     if check5 == 'Y':
-                        DB_answer = DB_answer + '及び' + Hadoop
-                        Logic_answer = Logic_answer + '及び' + Python
+                        DB_answer = DB_answer + 'また' + Hadoop
+                        Logic_answer = Logic_answer + 'また' + Python
 #                   Non-Analytics
                     else:                
                         pass
 #                   Use UI + Analytics
                     if check3 == 'Y' and check5 == 'Y':     
-                        Pre_answer = Pre_answer + '及び' + BI_tool
+                        Pre_answer = Pre_answer + 'また' + BI_tool
             else:
 #           CokeOne CRUD
                 DB_answer = CokeOne
@@ -90,7 +90,7 @@ class Process(object):
                     Pre_answer = Export_File
 #       CokeOne Transaction以外
         else:
-            DB_answer = RDBMS + MarkLogic
+            DB_answer = RDBMS + 'また' + MarkLogic
             Logic_answer = Abinito               
 #           Use UI
             if check3 == 'Y':
@@ -100,19 +100,19 @@ class Process(object):
                 Pre_answer = Export_File                               
 #           Analytics
             if check5 == 'Y':
-                DB_answer = DB_answer + '及び' + Hadoop
-                Logic_answer = Logic_answer + '及び' + Python
+                DB_answer = DB_answer + 'また' + Hadoop
+                Logic_answer = Logic_answer + 'また' + Python
 #           Non-Analytics
             else:                
                 pass
 #           Use UI + Analytics
             if check3 == 'Y' and check5 == 'Y':     
-                Pre_answer = Pre_answer + '及び' + BI_tool
+                Pre_answer = Pre_answer + 'また' + BI_tool
 #           Realtime
             if check4 == 'Y':
-                Logic_answer = Logic_answer + '及び' + JAVA
+                Logic_answer = Logic_answer + 'また' + JAVA
 #        return '1は{}・2は{}・3は{}・4は{}・5は{}です\n'.format(check1,check2,check3,check4,check5)
-        return 'DBは{}\n・開発言語は{}\n・プレゼンテーション機能は{}になります。'.format(DB_answer,Logic_answer,Pre_answer)
+        return '1.DBは{}\n2.開発言語は{}\n3.プレゼンテーション機能は{}が推奨となります。'.format(DB_answer,Logic_answer,Pre_answer)
 
 #    def _get_week_number(self, date_time):
 #        day = date_time.day

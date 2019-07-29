@@ -30,20 +30,20 @@ class MainMenu(StoryBoard):
                     title='メインメニュー',
                     text=text if text else '選択して下さい',
                     actions=[
-                        PostbackAction(
-                            label='勤怠メニュー',
-                            data=json.dumps({
-                                'model': 'clock_in',
-                                'scene': 'menu'
-                            })
-                        ),
-                        PostbackAction(
-                            label='ごみ出しメニュー',
-                            data=json.dumps({
-                                'model': 'trash',
-                                'scene': 'menu'
-                            })
-                        ),
+#                        PostbackAction(
+#                            label='勤怠メニュー',
+#                            data=json.dumps({
+#                                'model': 'clock_in',
+#                                'scene': 'menu'
+#                            })
+#                        ),
+#                        PostbackAction(
+#                            label='ごみ出しメニュー',
+#                            data=json.dumps({
+#                                'model': 'trash',
+#                                'scene': 'menu'
+#                            })
+#                        ),
 #                        PostbackAction(
 #                            label='(工事中)クーポンメニュー',
 #                            data=json.dumps({

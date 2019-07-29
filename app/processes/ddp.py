@@ -76,6 +76,11 @@ class Process(object):
             else:
 #           CokeOne CRUD
                 DB_answer = CokeOne
+                Logic_answer = ABAP
+                    if check3 == 'Y':
+                        Pre_answer = SAP_GUI
+                    else:
+                        Pre_answer = Export_File
         else:
 #       CokeOne Transaction以外
             pass

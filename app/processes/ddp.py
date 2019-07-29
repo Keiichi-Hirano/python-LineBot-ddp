@@ -33,7 +33,7 @@ HTML5 = 'HTML5：標準化選定にてCokeOne以外のシステムはGUIをHTML5
 'D3:Tableauで可視化(Visualization)されたものをHTMLベースで再構築する際に使用' + \
 '※可視化のパターン変化が少ない、又は、レポートの代替機能構築時使用\n'
 SAP_GUI = 'SAP専用GUIを使用\n'
-Export_File = 'UIの構築を伴わない場合、File Exportを使用\n'
+Export_File = 'UIの構築を伴わない場合、File Exportを実装(AbInito)\n'
 
 class Process(object):
     def __init__(self):
@@ -70,14 +70,14 @@ class Process(object):
                         Pre_answer = Export_File                               
 #                   Analytics
                     if check5 == 'Y':
-                        DB_answer = DB_answer + Hadoop
-                        Logic_answer = Logic_answer + Python
+                        DB_answer = DB_answer + '/' + Hadoop
+                        Logic_answer = Logic_answer + '/' + Python
 #                   Non-Analytics
                     else:                
                         pass
 #                   Use UI + Analytics
                     if check3 == 'Y' and check5 == 'Y':     
-                        Pre_answer = Pre_answer + BI_tool
+                        Pre_answer = Pre_answer + '/' + BI_tool
             else:
 #           CokeOne CRUD
                 DB_answer = CokeOne
@@ -100,17 +100,17 @@ class Process(object):
                 Pre_answer = Export_File                               
 #           Analytics
             if check5 == 'Y':
-                DB_answer = DB_answer + Hadoop
-                Logic_answer = Logic_answer + Python
+                DB_answer = DB_answer + '/' + Hadoop
+                Logic_answer = Logic_answer + '/' + Python
 #           Non-Analytics
             else:                
                 pass
 #           Use UI + Analytics
             if check3 == 'Y' and check5 == 'Y':     
-                Pre_answer = Pre_answer + BI_tool
+                Pre_answer = Pre_answer + '/' + BI_tool
 #           Realtime
             if check4 == 'Y':
-                Logic_answer = Logic_answer + JAVA
+                Logic_answer = Logic_answer + '/' + JAVA
 #        return '1は{}・2は{}・3は{}・4は{}・5は{}です\n'.format(check1,check2,check3,check4,check5)
         return 'DBは{}\n・開発言語は{}\n・プレゼンテーション機能は{}になります。'.format(DB_answer,Logic_answer,Pre_answer)
 

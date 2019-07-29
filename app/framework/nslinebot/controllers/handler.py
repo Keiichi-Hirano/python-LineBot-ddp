@@ -52,7 +52,7 @@ class MessageHandler(object):
 #        elif  original in ('DDP','ddp','Ddp','DDP利用メニュー'):
         if  original in ('DDP','ddp','Ddp','DDP利用メニュー'):
             r_text = 'DDP利用メニュー'
-        elif  original in ('メニュ','めにゅ','メインメニュー'):
+        elif  original in ('メニュー','メニュ','めにゅ','メインメニュー'):
             r_text = 'メインメニュー'
         else:
             r_text = 'noanswer'

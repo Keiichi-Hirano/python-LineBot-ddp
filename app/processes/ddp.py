@@ -24,13 +24,13 @@ ABAP = 'CokeOne・HANAを始めとするSAP環境では、専用開発言語のA
 
 # Presentation
 Pre_answer = ''
-BI_tool = '分析用にAggregation(集計)されたデータを元に'
-'データを可視化(Visualization)分析を行う際にTableauまたは、Sisenseを使用'
+BI_tool = '分析用にAggregation(集計)されたデータを元に' + \
+'データを可視化(Visualization)分析を行う際にTableauまたは、Sisenseを使用' + \
 '※可視化のパターン変化が多い場合、継続して使用可能\n'
 UI5 = 'SAP HANA上でのレポートを行う際にUI5(SAPのHTMLベースGUI)を使用'
-HTML5 = 'HTML5：標準化選定にてCokeOne以外のシステムはGUIをHTML5で構築する為' 
-'UIを使用の際はHTML5を使用\n'
-'D3:Tableauで可視化(Visualization)されたものをHTMLベースで再構築する際に使用'
+HTML5 = 'HTML5：標準化選定にてCokeOne以外のシステムはGUIをHTML5で構築する為' + \
+'UIを使用の際はHTML5を使用\n' + \
+'D3:Tableauで可視化(Visualization)されたものをHTMLベースで再構築する際に使用' + \
 '※可視化のパターン変化が少ない、又は、レポートの代替機能構築時使用\n'
 SAP_GUI = 'SAP専用GUIを使用\n'
 Export_File = 'UIの構築を伴わない場合、File Exportを使用\n'
@@ -91,7 +91,7 @@ class Process(object):
 #       CokeOne Transaction以外
         else:
             DB_answer = RDBMS + MarkLogic
-            Logic_answer = Abinito
+            Logic_answer = Abinito               
 #           Use UI
             if check3 == 'Y':
                 Pre_answer = HTML5

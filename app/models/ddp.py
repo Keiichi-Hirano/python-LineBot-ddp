@@ -311,7 +311,7 @@ class Ddp(StoryBoard):
                         ),
 
                         PostbackAction(
-                            label='Yes',
+                            label='No',
                             data=json.dumps({
                                 'model': 'ddp',
                                 'scene': 'check5YYYN',
@@ -343,7 +343,7 @@ class Ddp(StoryBoard):
                         ),
 
                         PostbackAction(
-                            label='Yes',
+                            label='No',
                             data=json.dumps({
                                 'model': 'ddp',
                                 'scene': 'check5YYNN',
@@ -375,7 +375,7 @@ class Ddp(StoryBoard):
                         ),
 
                         PostbackAction(
-                            label='Yes',
+                            label='No',
                             data=json.dumps({
                                 'model': 'ddp',
                                 'scene': 'check5YNYN',
@@ -407,7 +407,7 @@ class Ddp(StoryBoard):
                         ),
 
                         PostbackAction(
-                            label='Yes',
+                            label='No',
                             data=json.dumps({
                                 'model': 'ddp',
                                 'scene': 'check5YNNN',
@@ -439,7 +439,7 @@ class Ddp(StoryBoard):
                         ),
 
                         PostbackAction(
-                            label='Yes',
+                            label='No',
                             data=json.dumps({
                                 'model': 'ddp',
                                 'scene': 'check5NYYN',
@@ -471,7 +471,7 @@ class Ddp(StoryBoard):
                         ),
 
                         PostbackAction(
-                            label='Yes',
+                            label='No',
                             data=json.dumps({
                                 'model': 'ddp',
                                 'scene': 'check5NYNN',
@@ -503,7 +503,7 @@ class Ddp(StoryBoard):
                         ),
 
                         PostbackAction(
-                            label='Yes',
+                            label='No',
                             data=json.dumps({
                                 'model': 'ddp',
                                 'scene': 'check5NNYN',
@@ -535,7 +535,7 @@ class Ddp(StoryBoard):
                         ),
 
                         PostbackAction(
-                            label='Yes',
+                            label='No',
                             data=json.dumps({
                                 'model': 'ddp',
                                 'scene': 'check5NNNN',
@@ -608,7 +608,7 @@ class Ddp(StoryBoard):
                         ),
 
                          PostbackAction(
-                            label='Yes',
+                            label='No',
                             data=json.dumps({
                                 'model': 'ddp',
                                 'scene': 'answer',
@@ -644,7 +644,7 @@ class Ddp(StoryBoard):
                         ),
 
                          PostbackAction(
-                            label='Yes',
+                            label='No',
                             data=json.dumps({
                                 'model': 'ddp',
                                 'scene': 'answer',
@@ -680,7 +680,7 @@ class Ddp(StoryBoard):
                         ),
 
                          PostbackAction(
-                            label='Yes',
+                            label='No',
                             data=json.dumps({
                                 'model': 'ddp',
                                 'scene': 'answer',
@@ -716,7 +716,7 @@ class Ddp(StoryBoard):
                         ),
 
                          PostbackAction(
-                            label='Yes',
+                            label='No',
                             data=json.dumps({
                                 'model': 'ddp',
                                 'scene': 'answer',
@@ -752,7 +752,7 @@ class Ddp(StoryBoard):
                         ),
 
                          PostbackAction(
-                            label='Yes',
+                            label='No',
                             data=json.dumps({
                                 'model': 'ddp',
                                 'scene': 'answer',
@@ -788,7 +788,7 @@ class Ddp(StoryBoard):
                         ),
 
                          PostbackAction(
-                            label='Yes',
+                            label='No',
                             data=json.dumps({
                                 'model': 'ddp',
                                 'scene': 'answer',
@@ -824,7 +824,7 @@ class Ddp(StoryBoard):
                         ),
 
                          PostbackAction(
-                            label='Yes',
+                            label='No',
                             data=json.dumps({
                                 'model': 'ddp',
                                 'scene': 'answer',
@@ -860,7 +860,7 @@ class Ddp(StoryBoard):
                         ),
 
                          PostbackAction(
-                            label='Yes',
+                            label='No',
                             data=json.dumps({
                                 'model': 'ddp',
                                 'scene': 'answer',
@@ -896,7 +896,7 @@ class Ddp(StoryBoard):
                         ),
 
                          PostbackAction(
-                            label='Yes',
+                            label='No',
                             data=json.dumps({
                                 'model': 'ddp',
                                 'scene': 'answer',
@@ -932,7 +932,7 @@ class Ddp(StoryBoard):
                         ),
 
                          PostbackAction(
-                            label='Yes',
+                            label='No',
                             data=json.dumps({
                                 'model': 'ddp',
                                 'scene': 'answer',
@@ -968,7 +968,7 @@ class Ddp(StoryBoard):
                         ),
 
                          PostbackAction(
-                            label='Yes',
+                            label='No',
                             data=json.dumps({
                                 'model': 'ddp',
                                 'scene': 'answer',
@@ -1004,7 +1004,7 @@ class Ddp(StoryBoard):
                         ),
 
                          PostbackAction(
-                            label='Yes',
+                            label='No',
                             data=json.dumps({
                                 'model': 'ddp',
                                 'scene': 'answer',
@@ -1040,7 +1040,7 @@ class Ddp(StoryBoard):
                         ),
 
                          PostbackAction(
-                            label='Yes',
+                            label='No',
                             data=json.dumps({
                                 'model': 'ddp',
                                 'scene': 'answer',
@@ -1076,7 +1076,7 @@ class Ddp(StoryBoard):
                         ),
 
                          PostbackAction(
-                            label='Yes',
+                            label='No',
                             data=json.dumps({
                                 'model': 'ddp',
                                 'scene': 'answer',
@@ -1112,7 +1112,7 @@ class Ddp(StoryBoard):
                         ),
 
                          PostbackAction(
-                            label='Yes',
+                            label='No',
                             data=json.dumps({
                                 'model': 'ddp',
                                 'scene': 'answer',
@@ -1148,7 +1148,7 @@ class Ddp(StoryBoard):
                         ),
 
                          PostbackAction(
-                            label='Yes',
+                            label='No',
                             data=json.dumps({
                                 'model': 'ddp',
                                 'scene': 'answer',

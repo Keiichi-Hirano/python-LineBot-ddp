@@ -45,11 +45,12 @@ class MessageHandler(object):
     def _get_message_event(self):
         original = self.event.message.text
         r_text = ''
-        if original in ('勤怠','きんたい','勤怠メニュー'):
-            r_text = '勤怠メニュー'
-        elif  original in ('ごみ','ゴミ','ごみ出しメニュー'):
-            r_text = 'ごみ出しメニュー'
-        elif  original in ('DDP','ddp','Ddp','DDP利用メニュー'):
+#        if original in ('勤怠','きんたい','勤怠メニュー'):
+#            r_text = '勤怠メニュー'
+#        elif  original in ('ごみ','ゴミ','ごみ出しメニュー'):
+#            r_text = 'ごみ出しメニュー'
+#        elif  original in ('DDP','ddp','Ddp','DDP利用メニュー'):
+        if  original in ('DDP','ddp','Ddp','DDP利用メニュー'):
             r_text = 'DDP利用メニュー'
         elif  original in ('メニュ','めにゅ','メインメニュー'):
             r_text = 'メインメニュー'

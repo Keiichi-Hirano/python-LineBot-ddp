@@ -52,28 +52,28 @@ class Process(object):
 #           CokeOne read only
                 if check4 == 'Y':
 #               Realtime
-                    DB_answer = DB_answer + HANA
-                    Logic_answer = Logic_answer + ABAP
+                    DB_answer = HANA
+                    Logic_answer = ABAP
                     if check3 == 'Y':
-                        Pre_answer = Pre_answer + UI5
+                        Pre_answer = UI5
                     else:
-                        Pre_answer = Pre_answer + Export_File                               
+                        Pre_answer = Export_File                               
                 else:                
 #               Non-Realtime
-                    DB_answer = DB_answer + MarkLogic
-                    Logic_answer = Logic_answer + Abinito
+                    DB_answer = MarkLogic
+                    Logic_answer = Abinito
                     if check5 == 'Y':
 #                       Analytics
                         DB_answer = DB_answer + Hadoop
                         Logic_answer = Logic_answer + Python
-                        Pre_answer = Pre_answer + BI_tool
+                        Pre_answer = BI_tool
                     else:                
 #                       Non-Analytics
                         pass
                     if check3 == 'Y':
-                        Pre_answer = Pre_answer + HTML5
+                        Pre_answer = HTML5
                     else:
-                        Pre_answer = Pre_answer + Export_File                               
+                        Pre_answer = Export_File                               
             else:
 #           CokeOne CRUD
                 DB_answer = CokeOne

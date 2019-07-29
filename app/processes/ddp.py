@@ -81,7 +81,7 @@ class Process(object):
 #       CokeOne Transaction以外
             pass
 #        return '1は{}・2は{}・3は{}・4は{}・5は{}です\n'.format(check1,check2,check3,check4,check5)
-        return DB_answer,Logic_answer,Pre_answer
+        return 'DBは{}・開発言語は{}・プレゼンテーション機能は{}になります。'.format(DB_answer,Logic_answer,Pre_answer)
 
 #    def _get_week_number(self, date_time):
 #        day = date_time.day

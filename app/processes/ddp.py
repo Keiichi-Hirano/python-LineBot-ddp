@@ -41,10 +41,6 @@ class Process(object):
 
 #    def DDP_check_process(self):
     def DDP_check_process(self,check1,check2,check3,check4,check5):
-#        if weekday == 2 and week_number == 4:
-#        else:
-#            return '{}は「{}」の日です\n({})'.format(WEEKDAY[weekday], GARBAGE[weekday], DETAIL.get(GARBAGE[weekday]))
-#            return '{}は「{}」です\n({})'.format('テスト','良好','もうひと息！')
 #       CokeOne Transaction
         if check1 == 'Y':
 #           CokeOne read only

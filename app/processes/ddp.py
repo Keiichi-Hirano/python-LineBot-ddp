@@ -17,17 +17,17 @@ HANA  = 'CokeOne Dataをリアルタイムにレポート・分析する際にHA
 CokeOne  = 'CokeOneトランザクションの更新を伴う場合は、CokeOneシステムを使用'
 # Business Logic
 Logic_answer = ''
-Abinito = 'ETLに関わるすべての処理を担うプラットフォームとして使用(複数データの非同期更新）'
-JAVA = 'API及び、データエントリーに関わるGUIの開発にて使用(少量データの即時同期更新)'
-Python = '統計解析・分析・シュミレーション処理開発に使用 \n ※JAVA代替としも使用可能'
+Abinito = 'ETLに関わるすべての処理を担うプラットフォームとしてAbInitoを使用(複数データの非同期更新）'
+JAVA = 'API及び、データエントリーに関わるGUIの開発にてJAVA/Java Scriptを使用(少量データの即時同期更新)'
+Python = '統計解析・分析・シュミレーション処理開発にPython/R使用 \n ※JAVA代替としも使用可能'
 ABAP = 'SAP専用開発言語の為、ABAPをCokeOne・HANAを始めとする環境で使用'
 
 # Presentation
 Pre_answer = ''
 BI_tool = '分析用にAggregation(集計)されたデータを元に\n'
-'データを可視化(Visualization)分析を行う際に使用\n'
+'データを可視化(Visualization)分析を行う際にTableau/Sisenseを使用\n'
 '※可視化のパターン変化が多い場合、継続して使用可能'
-UI5 = 'SAP UI5(SAPのHTMLベースGUI)を利用する場合に使用'
+UI5 = 'SAP HANA上でのレポートを行う際にUI5(SAPのHTMLベースGUI)を使用'
 HTML5 = 'HTML5：標準化選定にてCokeOne以外のシステムはGUIをHTML5で構築する為\n' 
 'UIを使用の際はHTML5を使用\n'
 'D3:Tableauで可視化(Visualization)されたものをHTMLベースで再構築する際に使用\n'
@@ -80,7 +80,7 @@ class Process(object):
 #       CokeOne Transaction以外
             pass
 #        return '1は{}・2は{}・3は{}・4は{}・5は{}です\n'.format(check1,check2,check3,check4,check5)
-        return 'DBは{}・開発言語は{}・プレゼンテーション機能は{}になります。'.format(DB_answer,Logic_answer,Pre_answer)
+        return 'DBは{}\n・開発言語は{}\n・プレゼンテーション機能は{}になります。'.format(DB_answer,Logic_answer,Pre_answer)
 
 #    def _get_week_number(self, date_time):
 #        day = date_time.day

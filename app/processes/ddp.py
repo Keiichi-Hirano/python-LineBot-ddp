@@ -77,13 +77,18 @@ class Process(object):
 #           CokeOne CRUD
                 DB_answer = CokeOne
                 Logic_answer = ABAP
-                    if check3 == 'Y':
-                        Pre_answer = SAP_GUI
-                    else:
-                        Pre_answer = Export_File
+                if check3 == 'Y':
+                    Pre_answer = SAP_GUI
+                else:
+                    Pre_answer = Export_File
         else:
 #       CokeOne Transaction以外
-            pass
+            DB_answer = RDBMS + MarkLogic
+            Logic_answer = Abinito
+
+
+
+
 #        return '1は{}・2は{}・3は{}・4は{}・5は{}です\n'.format(check1,check2,check3,check4,check5)
         return 'DBは{}\n・開発言語は{}\n・プレゼンテーション機能は{}になります。'.format(DB_answer,Logic_answer,Pre_answer)
 

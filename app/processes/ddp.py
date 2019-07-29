@@ -19,19 +19,19 @@ CokeOne  = 'CokeOneトランザクションの更新を伴う場合は、CokeOne
 Logic_answer = ''
 Abinito = 'ETLに関わるすべての処理を担うプラットフォームとしてAbInitoを使用(複数データの非同期更新）'
 JAVA = 'API及び、データエントリーに関わるGUIの開発にてJAVA/Java Scriptを使用(少量データの即時同期更新)'
-Python = '統計解析・分析・シュミレーション処理開発にPython及びRを使用※JAVA代替としも使用可能'
+Python = '統計解析・分析・シュミレーション処理開発にPython及びRを使用(JAVA代替としも使用可能)'
 ABAP = 'CokeOne・HANAを始めとするSAP環境では、専用開発言語のABAPを使用'
 
 # Presentation
 Pre_answer = ''
 BI_tool = '分析用にAggregation(集計)されたデータを元に' + \
 'データを可視化(Visualization)分析を行う際にTableauまたは、Sisenseを使用' + \
-'※可視化のパターン変化が多い場合、継続して使用可能'
+'(可視化のパターン変化が多い場合、継続して使用可能)'
 UI5 = '・SAP HANA上でのレポートを行う際にUI5(SAPのHTMLベースGUI)を使用'
 HTML5 = 'HTML5：標準化選定にてCokeOne以外のシステムはGUIをHTML5で構築する為' + \
 'UIを使用の際はHTML5を使用\n' + \
 'D3:Tableauで可視化(Visualization)されたものをHTMLベースで再構築する際に使用' + \
-'※可視化のパターン変化が少ない、又は、レポートの代替機能構築時に使用'
+'(可視化のパターン変化が少ない、又は、レポートの代替機能構築時に使用)'
 SAP_GUI = 'SAP専用GUIを使用'
 Export_File = 'UIの構築を伴わない場合、File Exportを実装(AbInito)'
 

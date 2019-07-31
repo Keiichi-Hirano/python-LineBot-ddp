@@ -1,7 +1,7 @@
 """
-author          : nsuhara <na010210dv@gmail.com>
-date created    : 2019/5/1
-python version  : 3.7.3
+author          : 
+date created    : 2019/7/31
+python version  : 3.7.2
 """
 import datetime
 import logging
